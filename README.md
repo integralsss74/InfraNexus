@@ -1,57 +1,44 @@
-# 🏗️ InfraNexus (MoSPI Infrastructure Risk Predictor)
+# 🏗️ InfraNexus
 
-**InfraNexus** is a full-stack, responsive platform built for the predictive monitoring of infrastructure projects. It helps track portfolio risk, project delays, cost overruns, and provides early-warning signals using an intelligent decision-support system. 
+**InfraNexus** is a full-stack, responsive demonstration platform for predictive infrastructure monitoring and early warning. It presents a governed workspace for portfolio risk, project investigation, explainable analytical signals, scenario analysis, secure source-file staging, benchmarking, and controlled natural-language answers.
 
 ### 🔗 Live Demo
 **👉 [https://infranexus.onrender.com](https://infranexus.onrender.com/)**
 
----
-
-## ✨ Key Features
-
-- 📊 **Interactive Monitoring Dashboard:** Track key performance indicators (KPIs), risk distributions, and project statuses across various sectors and ministries in real-time.
-- 🔍 **Project Investigation:** Search and filter through infrastructure projects to see their financial schedules, delay trajectories, and automated risk contributors.
-- 🤖 **AI Intelligence Assistant:** A built-in assistant that allows you to ask natural language questions about your portfolio and get instant, data-backed answers.
-- 📂 **Governed Data Management:** Securely upload and map your CSV/XLSX files (up to 5 MB) to easily ingest new infrastructure data into the system.
-- 🔮 **Risk Prediction & Scenario Analysis:** Calculate potential cost and time overruns based on synthetic progress data and run "what-if" simulations.
+> **Demonstration notice.** The platform uses a **Synthetic Demonstration Dataset** unless it is connected to an authorized source. Predictions, recommendations, benchmark comparisons, and reference outputs are analytical demonstrations; they are not official Government of India decisions or live records.
 
 ---
 
-## 🛠️ Tech Stack
+## 🌟 What is included
 
-- **Frontend:** React, TypeScript, Tailwind CSS, Vite, Recharts, Leaflet (Maps)
-- **Backend:** Node.js, Express, tRPC (for end-to-end type safety)
-- **Database:** Drizzle ORM (Supports PostgreSQL / MySQL / Local mock data)
-
----
-
-## 💻 Local Setup
-
-Want to run this project on your own machine? Follow these simple steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/integralsss74/paimana-AI.git
-   cd paimana-AI
-   ```
-
-2. **Install the dependencies:**
-   Make sure you have [Node.js](https://nodejs.org/) and `pnpm` installed.
-   ```bash
-   pnpm install
-   ```
-
-3. **Start the development server:**
-   ```bash
-   pnpm dev
-   ```
-   *The app will automatically open at `http://localhost:3000`.*
-
-4. *(Optional)* **Build for Production:**
-   ```bash
-   pnpm build
-   pnpm start
-   ```
+| Area | Included capability |
+|---|---|
+| **Portfolio** | 1,248 deterministic synthetic infrastructure projects and 9,984 monthly observations across sectors, ministries, states, agencies, risk categories, predictions, and early-warning signals. |
+| **Monitoring** | Dashboard KPIs, reference-figure labelling, risk distribution, sector/ministry comparison, cost and time-overrun distributions, geographic representation, and early-warning feed. |
+| **Investigation** | Searchable Project Explorer with filters, sorting, pagination, project detail, financial and schedule summaries, trajectory, risk contributors, alerts, and recommendations. |
+| **Decision support** | Transparent cost, schedule, implementation, and overall-risk calculation; configurable-style early-warning thresholds; controlled what-if scenario simulation; benchmarking. |
+| **Hybrid ML service** | Optional FastAPI sidecar with deterministic training, time-ordered evaluation, governed prediction/explanation/simulation endpoints, model cards, and a controlled TypeScript fallback. |
+| **Explainability** | Real Random Forest TreeSHAP accounting—including base value, model output, signed contributions, and residual—when the sidecar is available. The managed fallback is explicitly labelled non-SHAP. |
+| **Intelligence assistant** | Deterministic, read-only query layer grounded exclusively in the structured synthetic portfolio. Unsupported questions return *“Insufficient project data available.”* |
+| **Data governance** | CSV/XLS/XLSX source-file staging up to 5 MB, worksheet-aware preview, project-name/sector/agency mapping, secure object storage for source bytes, and relational import metadata/history. |
+| **Governed action** | Persisted intervention reviews, immutable response events, saved filters, acceptable-use acknowledgement, and a structured portfolio-brief archive with administrator approval. |
+| **Coordinate safety** | An authorised Risk Map that remains marker-free without governed records, plus manual and consent-checked CSV coordinate publication controls restricted to administrators. |
 
 ---
 
+## 🏗 Architecture
+
+```text
+Synthetic project generator + monthly observations
+                 │
+       Typed portfolio procedures (tRPC)
+                 ├── dashboard / explorer / benchmark queries
+                 ├── risk, alert, and explainability rules
+                 ├── optional ML-service adapter (1.8 s bounded request)
+                 ├── controlled what-if simulation
+                 ├── grounded assistant response layer
+                 └── secure source-file metadata and storage references
+                 │
+   React workspace, decision-support views, and documentation
+                 │
+   Optional local FastAPI service (prediction / explain / simulate / model card)
