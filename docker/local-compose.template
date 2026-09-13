@@ -1,0 +1,9 @@
+# Copy the values below into your local Compose environment. Do not commit credentials.
+POSTGRES_DB=paimana
+POSTGRES_USER=paimana
+POSTGRES_PASSWORD=replace-with-a-local-development-password
+PAIMANA_POSTGRES_URL=postgresql://paimana:replace-with-a-local-development-password@postgres:5432/paimana
+PAIMANA_PRODUCTION_GATEWAY_SECRET=replace-with-a-random-32-character-minimum-secret
+ML_SERVICE_URL=http://ml-api:8010
+ALLOWED_ORIGINS=http://localhost:3000
+OLLAMA_BASE_URL=http://ollama:11434

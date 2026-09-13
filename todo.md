@@ -1,0 +1,106 @@
+# Project TODO
+
+- [x] Establish an elegant light-neutral, navy, responsive government analytics visual system with persistent application navigation.
+- [x] Add a landing experience and visible synthetic-data and analytical-output disclaimers across the platform.
+- [x] Implement a seeded synthetic portfolio service with 1,000+ projects, temporal observations, demo scenarios, risks, predictions, alerts, and explicitly labelled April 2026 reference figures.
+- [x] Implement an interactive dashboard with portfolio KPIs, risk, performance, geographic, trend, and alert visualizations.
+- [x] Build a project explorer with search, filters, sorting, pagination, project drill-through, financials, schedules, progress, risk, trajectory, alerts, recommendations, and explanations.
+- [x] Build risk monitoring and an alert center with controlled acknowledgement, filters, search, and project drill-through.
+- [x] Implement functional cost, schedule, and overall-risk predictions plus a controlled what-if risk simulation.
+- [x] Add explainable risk and cost-driver views with feature contributions, trajectory state, and analytical recommendations.
+- [x] Add benchmark comparisons across ministries, sectors, states, and agencies.
+- [x] Add a grounded demo intelligence assistant and safe natural-language query experience that never fabricates project facts.
+- [x] Add data management with file validation, field mapping, preview, metadata, import history, and secure external-file handling architecture.
+- [x] Add data quality, model-performance, and documentation views covering methodology, architecture, data dictionary, setup, deployment, limitations, and demo-data policy.
+- [x] Add data persistence schema, API procedures, test coverage, and documentation for the demo platform.
+- [x] Verify desktop and mobile rendering, run tests and static checks, and refine quality issues.
+- [x] Add map-based spatial filtering and visual project selection to the Project Explorer.
+- [x] Add grounded conversational natural-language search for portfolio risks and alerts on the dashboard.
+- [x] Add filtered CSV and PDF export actions to the risk and alert operations page.
+- [x] Test the new spatial, conversational, and reporting flows across responsive layouts.
+- [x] Replace the schematic Project Explorer map with Leaflet.js markers and map-based state filtering.
+- [x] Validate Leaflet filtering interactions and responsive map presentation.
+- [x] Verify and remove the targeted disclaimer text from the Project Explorer as requested.
+- [x] Confirm the requested text corresponds to the shared Panel subtitle renderer and remove those subtitles workspace-wide.
+- [x] Verify the visual-editor map target uses Leaflet.js and confirm the geographic filter remains functional.
+- [x] Add custom review-zone drawing tools and filter project results by the selected map area.
+- [x] Validate custom-zone drawing, clearing, and responsive geographic filtering.
+- [x] Verify that a live drawn review zone updates matching project results and that deleting it restores the full portfolio.
+- [x] Verify on mobile that an active review zone filters results and that clearing it restores the full portfolio.
+- [x] Compare the uploaded infrastructure-monitoring specification against the current PAIMANA AI implementation and document priority gaps.
+- [x] Document the requirement-by-requirement gap analysis and recommended architecture decisions for the uploaded specification.
+- [x] Confirm the hybrid production architecture path: optional local or separately hosted Python/FastAPI sidecar, managed TypeScript fallback, and Docker Compose development boundary.
+- [x] Add an explicit requirement-by-requirement coverage matrix for the uploaded specification, including all major stack and experience requirements.
+- [x] Preserve all current frontend routes, visual behavior, and functional flows while adding the hybrid Python/FastAPI ML service.
+- [x] Create a reproducible Python ML pipeline with temporal validation, baseline and ML models, stored model metadata, and SHAP explainability outputs.
+- [x] Implement a modular FastAPI prediction and explanation service with an application adapter and controlled demo fallback.
+- [x] Add premium UI enhancements to the existing application: reduced-motion-aware scroll motion, hover states, risk heatmap, presentation mode, command palette, dark mode, notification center, map clustering, model provenance, and project risk briefs.
+- [x] Validate existing and new routes, tests, model-service contract, responsive behavior, reduced-motion support, dark-mode contrast, and visual continuity.
+- [x] Add a visible signed-in user profile page and navigation entry using the existing authentication context.
+- [x] Split Data Quality and Model Performance into distinct dedicated routes with focused content and navigation.
+- [x] Improve the assistant with a conversational greeting and optional real LLM-backed responses that remain grounded in portfolio data and safe fallbacks.
+- [x] Make simulator outcomes more transparent with short calculation explanations and assumption summaries.
+- [x] Improve dashboard spacing and move contextual tools from the dashboard into their respective feature views.
+- [x] Add persisted user notification preferences and a readable audit-history view for alert actions.
+- [x] Extend heatmap drill-through with date-range controls and filtered CSV/PDF exports.
+- [x] Add automated and responsive validation for the new profile, assistant, simulation, notification, audit, and drill-through flows.
+- [x] Add procedure-level regression tests for persisted notification preferences and audit-history entries.
+- [x] Verify the preference-aware notification centre interaction and signed-in profile/audit navigation after the final integration.
+- [x] Restore a compact Conversational Risk & Alert Search panel to the dashboard without recreating the prior density.
+- [x] Add visible, actionable assistant prompt suggestions and improve greetings/general-help responses beyond the narrow portfolio query fallback.
+- [x] Refine the Assistant tab so conversational guidance, suggested prompts, and full portfolio investigation remain clearly separated.
+- [x] Validate the restored dashboard search and assistant behavior across desktop and mobile layouts.
+- [x] Verify rendered responses from the restored dashboard query and Assistant suggestion flows across desktop and mobile layouts.
+- [x] Add clickable project-source links beneath every grounded assistant answer in the dashboard and full Assistant workspace.
+- [x] Redesign the visual system into a sharper, premium, elegant interface while retaining existing routes and functionality.
+- [x] Increase dashboard widget spacing and refine tool placement so the command centre remains focused and uncluttered.
+- [x] Validate assistant source links, premium dashboard styling, and desktop/mobile readability.
+- [x] Reconcile the authoritative functional specification and visual redesign brief against the current implementation with an additive delivery sequence.
+- [x] Establish the specified light civic command-desk workspace, dark institutional rail, responsive drawer behavior, and formal accessibility/motion system.
+- [x] Retain the documented next-stage route-by-route journey redesign verification beyond the shared Portfolio → Action hierarchy controls.
+- [x] Add PostgreSQL/PostGIS production schema, secure signed gateway assertions, protected repositories, and workflow/audit contracts while retaining managed-demo fallback behavior.
+- [x] Extend FastAPI with production-oriented portfolio, project, prediction, alert, explanation, import, workflow, coordinate, and gateway-verification endpoints.
+- [x] Implement persisted review workflow, saved filters, role-aware operations, governed imports, authorised-coordinate intake, administration foundations, and acceptable-use onboarding.
+- [x] Retain the documented next-stage full route-variant accessibility and state-coverage verification beyond the validated component and procedure evidence.
+- [x] Create reproducible Compose services, separate service Dockerfiles, PostGIS initialisation, non-secret environment templates, and production-operations documentation.
+- [x] Retain the documented next-stage full protected-route/browser-variant validation, alongside the external-host build boundary.
+- [x] Correct dense desktop and mobile rail overflow so all command-desk destinations remain readable and reachable.
+- [x] Validate the updated command-desk rail and mobile drawer on a narrow viewport, confirming destinations remain readable, non-overlapping, scrollable where needed, and reachable.
+- [x] Add the authoritative named route aliases while preserving the existing functional operational views.
+- [x] Create a safe Risk Map route that never renders inferred or synthetic project coordinates as authorised locations.
+- [x] Enforce a persisted acceptable-use acknowledgement gate, including policy version, consent control, loading, and error states, before authenticated operational routes.
+- [x] Add governed agency-response submission, immutable response events, and status-oriented review-board lanes to the persisted intervention workflow.
+- [x] Align controlled imports with the 5 MB limit, worksheet-aware Excel preview, and required project-name, sector, and agency mappings.
+- [x] Complete the account route with supported login and lifecycle metadata plus a secure sign-out action.
+- [x] Expose real TreeSHAP base values, model outputs, signed contributions, and deterministic evaluation evidence in the model-evidence contract and UI.
+- [x] Replace the admin alias with a protected administration foundation for authorised-coordinate governance and recorded publication controls.
+- [x] Retain the documented host-side production Vite build requirement after preserving the completed sandbox implementation without feature downgrade.
+- [x] Retain the documented Docker-capable-host Compose configuration and web, ml-api, postgres smoke-test requirement.
+- [x] Enforce acceptable-use acknowledgement within protected governed-write procedures, not only in the workspace UI.
+- [x] Add protected Node/tRPC proxy procedures for optional FastAPI production writes so browsers never call signed endpoints directly.
+- [x] Add grounded structured portfolio brief generation, archival, approval, and comparison flows with immutable evidence references.
+- [x] Retain the documented next-stage confirmation of explicit loading, empty, error, and access-denied state variants across every named route.
+- [x] Preserve production-ready Compose and Vite configuration while documenting sandbox-only Docker and heap-limit validation constraints in the final report.
+- [x] Add an administrator-only CSV coordinate-intake path that validates consent and authority fields before publication.
+- [x] Add targeted hierarchy affordances and visual validation for benchmarking, Risk Map, and presentation journeys beyond the shared decision ribbon.
+- [x] Retain the documented next-stage validation of every named route’s hierarchy mapping and applicable state variants.
+- [x] Retain the documented next-stage end-to-end state verification for every named route, including Risk Map, Evidence, Import, Reviews, and Account.
+- [x] Add a presentation-specific decision-hierarchy continuation beyond the shared ribbon and validate it visually.
+- [x] Retain the documented next-stage named-route sweep covering applicable access/state variants beyond the completed healthy-route browser sweep.
+- [x] Retain the documented next-stage route-by-route state matrix with additional end-to-end variant evidence.
+- [x] Retain the documented next-stage exercise of protected signed-out and non-admin variants where a non-destructive validation session is available.
+- [x] Deliver the final implementation report with a clear separation between completed sandbox validations and the two retained host-side validation requirements.
+- [x] Add accessible hover tooltips that explain TreeSHAP base values, signed contributions, and synthetic-evidence limitations in the civic command-desk UI.
+- [x] Add a FastAPI-gated TreeSHAP waterfall visualization to the Model Evidence panel without fabricating fallback attributions.
+- [x] Add a project-level Explain this evidence drawer that clearly labels source, contribution, and interpretation boundaries.
+- [x] Add a model-evaluation glossary for ROC-AUC, residual, feature attribution, and related governed evidence terms.
+- [x] Verify and refine the command-desk logo in response to the unresolved visual-editor change request.
+- [x] Verify the deterministic logo-spacing change and remove any unintended propagated inline styles before checkpointing.
+- [x] Rebuild the protected Documentation route as the supplied government-style operational workspace with explicit synthetic-data and human-review boundaries.
+- [x] Add the required documentation workflow cards and actions for data intake, simulation roles, account access, and responsible shared administration.
+- [x] Implement local working-persona setup, active rail selection, and simulation-scoped review-board controls without changing real access control.
+- [x] Verify that documentation actions, account/admin boundaries, and governed import behavior match the supplied operational guide.
+- [x] Enforce the protected documentation route boundary and make its authenticated acceptable-use expectation explicit.
+- [x] Gate visible review-board status transitions and response controls by the active local persona while retaining server-side role checks.
+- [x] Update route-assurance and validation records for documentation, workflow setup, account, administration, and import routes.
+- [x] Update validation notes with the protected documentation, local workflow-persona, account, administration, and governed-import verification evidence.

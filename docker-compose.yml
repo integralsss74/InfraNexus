@@ -1,0 +1,63 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: docker/web.Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      ML_SERVICE_URL: ${ML_SERVICE_URL:-http://ml-api:8010}
+      PAIMANA_POSTGRES_URL: ${PAIMANA_POSTGRES_URL}
+      PAIMANA_PRODUCTION_GATEWAY_SECRET: ${PAIMANA_PRODUCTION_GATEWAY_SECRET}
+    depends_on:
+      ml-api:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+
+  ml-api:
+    build:
+      context: ./services/ml-api
+    ports:
+      - "8010:8010"
+    environment:
+      ARTIFACT_DIR: /app/artifacts
+      ALLOWED_ORIGINS: ${ALLOWED_ORIGINS:-http://localhost:3000}
+      PAIMANA_POSTGRES_URL: ${PAIMANA_POSTGRES_URL}
+      PAIMANA_PRODUCTION_GATEWAY_SECRET: ${PAIMANA_PRODUCTION_GATEWAY_SECRET}
+    volumes:
+      - ml_artifacts:/app/artifacts
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgis/postgis:16-3.4
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-paimana}
+      POSTGRES_USER: ${POSTGRES_USER:-paimana}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./services/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["ollama"]
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+
+volumes:
+  postgres_data:
+  ml_artifacts:
+  ollama_data:

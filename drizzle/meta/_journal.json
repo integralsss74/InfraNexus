@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1787589341643,
+      "tag": "0000_messy_ben_urich",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1787589681792,
+      "tag": "0001_fresh_tenebrous",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1787590336071,
+      "tag": "0002_supreme_shen",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1787619477008,
+      "tag": "0003_amazing_harrier",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1787624176168,
+      "tag": "0004_organic_bishop",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1787626666918,
+      "tag": "0005_ancient_fallen_one",
+      "breakpoints": true
+    }
+  ]
+}
