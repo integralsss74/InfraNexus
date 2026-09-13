@@ -177,15 +177,7 @@ export default defineConfig({
     },
     rollupOptions: {
       output: {
-        manualChunks(id) {
-          if (!id.includes("node_modules")) return;
-          if (id.includes("leaflet")) return "maps";
-          if (id.includes("recharts")) return "charts";
-          if (id.includes("jspdf") || id.includes("xlsx")) return "reports";
-          if (id.includes("lucide-react")) return "icons";
-          if (id.includes("@radix-ui")) return "radix";
-          return "vendor";
-        },
+        // Removed custom manualChunks to prevent circular dependencies between vendor and UI chunks
       },
     },
   },
