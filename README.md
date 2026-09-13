@@ -135,6 +135,3 @@ The platform does not connect to PAIMANA/OCMS, any Government of India data syst
 
 ---
 
-## 📚 Documentation
-
-See architecture documentation and the in-product Documentation view for the problem statement, data model, feature logic, governance, setup, deployment considerations, limitations, and future extension points.
