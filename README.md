@@ -129,9 +129,3 @@ The FastAPI sidecar trains deterministic synthetic baselines, Random Forest esti
 
 ---
 
-## ⚠️ Important limitations
-
-The platform does not connect to PAIMANA/OCMS, any Government of India data system, or a live geospatial service. The authorised Risk Map deliberately withholds project markers until governed coordinate records are available; representative synthetic explorer markers are not presented as authorised GIS. The assistant intentionally does not execute SQL and does not infer project facts outside its supported query patterns. An authorised deployment should introduce source-specific validation, identity and role controls, audit logging, model version governance, production monitoring, a separately evaluated ML pipeline, and an independently managed Python-capable runtime if the sidecar is retained.
-
----
-
