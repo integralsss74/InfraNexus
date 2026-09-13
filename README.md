@@ -55,6 +55,3 @@ Want to run this project on your own machine? Follow these simple steps:
 
 ---
 
-## ⚠️ Disclaimer
-
-*This project was created for demonstration and hackathon purposes. The platform currently uses a **Synthetic Demonstration Dataset** to showcase its features. Predictions, early-warning signals, and figures do not represent official Government of India decisions or real-world project data.*
