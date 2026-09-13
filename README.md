@@ -28,25 +28,13 @@
 
 ## 🏗 Architecture
 
-```text
-Synthetic project generator + monthly observations
-                 │
-       Typed portfolio procedures (tRPC)
-                 ├── dashboard / explorer / benchmark queries
-                 ├── risk, alert, and explainability rules
-                 ├── optional ML-service adapter (1.8 s bounded request)
-                 ├── controlled what-if simulation
-                 ├── grounded assistant response layer
-                 └── secure source-file metadata and storage references
-                 │
-   React workspace, decision-support views, and documentation
-                 │
-   Optional local FastAPI service (prediction / explain / simulate / model card)
-```
 
-The managed application uses React, TypeScript, Tailwind CSS, Express, tRPC, Drizzle, MySQL/TiDB-compatible persistence, Recharts, Leaflet, and built-in object storage. The optional Python service lives behind a server-only adapter and never exposes database credentials or arbitrary SQL to the client.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/integralsss74/paimana-AI/main/InfraNexus_architecture.png"
+       alt="InfraNexus System Architecture"
+       width="1500">
+</p>
 
----
 
 ## 💻 Local development
 
