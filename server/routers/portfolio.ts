@@ -58,7 +58,10 @@ export const portfolioRouter = router({
     const detail = projectDetail(input.projectId ?? "P-0004");
     if (!detail) return { ...baseline, calculationExplanation: baseline.explanation, modelSource: "typescript-demo-fallback" as const };
     const model = await predictionFor(detail.project, { physical_progress: input.physicalProgress, financial_progress: input.financialProgress, milestones_delayed: input.delayedMilestones, extensions: input.extensions, clearance_status: input.clearance }, true);
-    return { ...baseline, calculationExplanation: baseline.explanation, costRisk: model.costRisk, delayRisk: model.timeRisk, implementationRisk: model.implementationRisk, overallRisk: model.overallRisk, category: model.riskCategory, delta: Math.round((model.overallRisk - baseline.baseline) * 10) / 10, modelSource: model.source, modelVersion: model.modelVersion, disclaimer: model.disclaimer };
+    if (model.source === "typescript-demo-fallback") {
+      return { ...baseline, calculationExplanation: baseline.explanation, modelSource: model.source, modelVersion: model.modelVersion, disclaimer: model.disclaimer };
+    }
+    return { ...baseline, calculationExplanation: baseline.explanation, costRisk: model.costRisk, delayRisk: model.timeRisk, implementationRisk: model.implementationRisk, overallRisk: model.overallRisk, category: model.riskCategory, delta: Math.round((model.overallRisk - detail.project.overallRisk) * 10) / 10, modelSource: model.source, modelVersion: model.modelVersion, disclaimer: model.disclaimer };
   }),
   benchmark: publicProcedure.input(z.object({ groupBy: z.enum(["ministry", "sector", "state", "agency"]) })).query(({ input }) => benchmark(input.groupBy)),
   ask: publicProcedure.input(z.object({ question: z.string().min(1).max(500) })).mutation(async ({ input }) => answerWithGroundedAssistant(input.question, answerQuestion(input.question))),
